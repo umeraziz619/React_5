@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{memo} from 'react';
 
 
 function DataDisplay({data}){
@@ -10,5 +10,5 @@ function DataDisplay({data}){
     </>
 
 }
-
-export default DataDisplay
+// if any state changes it trigger the re render. memo will render only when it needs
+export default memo(DataDisplay)
